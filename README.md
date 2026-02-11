@@ -1,7 +1,7 @@
 # Bank Customer Churn Prediction - Spark ML Pipeline on EMR
 Student: Ali Ainur
 Distributed Computing Lab
------------------------------------------------------------------------------
+
 ## DATASET DESCRIPTION
 Name: Bank Customer Churn Dataset
 Source: Kaggle (https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling)
