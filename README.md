@@ -87,9 +87,8 @@ spark-submit \
 
 #### Expected output: Accuracy: ~0.7797
 
-===============================================================================
 ## RESULTS SUMMARY
-===============================================================================
+
  Model                          Accuracy
  ----------------------------------------
  Logistic Regression            0.7929
@@ -116,7 +115,6 @@ bash```
 hdfs dfs -mkdir -p /user/hadoop/churn_input                    #create folder
 hdfs dfs -put Churn_Modelling.csv /user/hadoop/churn_input/    #include csv file
 ```
-
 Verify:
 bash```
 hdfs dfs -ls /user/hadoop/churn_input
@@ -128,19 +126,9 @@ YARN ResourceManager: http://<master-dns>:8088
 Spark UI: http://<master-dns>:4040
 
 ===============================================================================
-## GITHUB REPOSITORY
+### AUTHOR
 ===============================================================================
- https://github.com/Ainuralin/spark-churn-lab
-
-Clone repository:
-bash```
-git clone https://github.com/Ainuralin/spark-churn-lab.git
-cd spark-churn-lab
-```
-===============================================================================
-# AUTHOR
-===============================================================================
-# Name: Ali Ainur
-# Course: Distributed Computing
-# Lab: Spark ML Pipeline on Amazon EMR
-# Date: February 2026
+ Name: Ali Ainur
+ Course: Distributed Computing
+ Lab: Spark ML Pipeline on Amazon EMR
+ Date: February 2026
