@@ -1,10 +1,8 @@
 # Bank Customer Churn Prediction - Spark ML Pipeline on EMR
 Student: Ali Ainur
 Distributed Computing Lab
-
-===============================================================================
+-----------------------------------------------------------------------------
 ## DATASET DESCRIPTION
-===============================================================================
 Name: Bank Customer Churn Dataset
 Source: Kaggle (https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling)
 File: Churn_Modelling.csv
@@ -19,10 +17,8 @@ Features:
   - NumOfProducts  : Banking products used (numeric)
   - EstimatedSalary: Customer salary (numeric)
   - Exited        : Target variable (0=Stayed, 1=Churned)
-
-===============================================================================
+ -----------------------------------------------------------------------------
 ## PREREQUISITES
-===============================================================================
  1. AWS EMR Cluster with:
     - Hadoop
     - Spark
@@ -36,9 +32,7 @@ Features:
     hdfs dfs -mkdir -p /user/hadoop/churn_input
     hdfs dfs -put Churn_Modelling.csv /user/hadoop/churn_input/
 
-===============================================================================
 ## PIPELINE COMPONENTS
-===============================================================================
  1. Data Loading      : Load CSV from HDFS
  2. Encoding         : StringIndexer + OneHotEncoder for Geography/Gender
  3. Feature Assembly : VectorAssembler (all features)
@@ -47,9 +41,8 @@ Features:
  6. Prediction      : Transform test data
  7. Evaluation      : Accuracy metric
 
-===============================================================================
+ -----------------------------------------------------------------------------
 ## SPARK SUBMIT COMMANDS
-===============================================================================
 
 ### 1. LOGISTIC REGRESSION PIPELINE
  ---------------------------------
@@ -98,9 +91,8 @@ spark-submit \
  Conclusion: Random Forest performs best for this dataset.
  Categorical features improve model accuracy by ~1.3%.
 
-===============================================================================
+ -----------------------------------------------------------------------------
 ## FILE STRUCTURE
-===============================================================================
  spark-churn-lab/
  │
  ├── churn_pipeline.py               # Logistic Regression pipeline for first time to check the code and work
@@ -108,9 +100,8 @@ spark-submit \
  ├── README.md                       # This file
  └── Churn_Modelling.csv             # Dataset (local copy)
 
-===============================================================================
+ -----------------------------------------------------------------------------
 ## VERIFY HDFS DATA
-===============================================================================
 bash```
 hdfs dfs -mkdir -p /user/hadoop/churn_input                    #create folder
 hdfs dfs -put Churn_Modelling.csv /user/hadoop/churn_input/    #include csv file
@@ -119,15 +110,13 @@ Verify:
 bash```
 hdfs dfs -ls /user/hadoop/churn_input
 ```
-===============================================================================
+ -----------------------------------------------------------------------------
 ## MONITOR SPARK JOB
-===============================================================================
 YARN ResourceManager: http://<master-dns>:8088
 Spark UI: http://<master-dns>:4040
 
-===============================================================================
+ -----------------------------------------------------------------------------
 ### AUTHOR
-===============================================================================
  Name: Ali Ainur
  Course: Distributed Computing
  Lab: Spark ML Pipeline on Amazon EMR
