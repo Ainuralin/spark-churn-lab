@@ -1,5 +1,3 @@
-# README.md
-
 # Spark ML Pipeline for Customer Churn Prediction on Amazon EMR
 
 ## Distributed Computing Lab 6
@@ -145,6 +143,3 @@ spark-submit --master yarn --deploy-mode client churn_pipeline_experiment.py
 - Article: [Implementing Machine Learning Pipelines with Apache Spark](https://www.kdnuggets.com/implementing-machine-learning-pipelines-with-apache-spark)
 - Dataset: [Bank Customer Churn Dataset - Kaggle](https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling)
 
----
-
-**END**
